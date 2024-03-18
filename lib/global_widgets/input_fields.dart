@@ -26,6 +26,7 @@ class InputFields extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         TextFormField(
+          style: const TextStyle(color: AppColors.white),
           decoration: const InputDecoration(
             filled: true,
             fillColor: AppColors.inputBoxColor,

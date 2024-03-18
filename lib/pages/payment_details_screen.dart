@@ -22,49 +22,51 @@ class _PaymentDetailsScreenState extends State<PaymentDetailsScreen> {
     return const SafeArea(
       child: Scaffold(
         backgroundColor: AppColors.backGroundColor,
-        body: Padding(
-          padding: AppPaddings.all24,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              TitleText(),
-              SizedBox(height: 30),
-              InputFields(
-                validatorText: "Please enter your card number",
-                title: 'Card Number',
-              ),
-              SizedBox(height: 30),
-              InputFields(
-                validatorText: "Please enter your cardholder name",
-                title: 'Cardholder Name',
-              ),
-              SizedBox(height: 30),
-              Row(
-                children: [
-                  Expanded(
-                    flex: 2,
-                    child: InputFields(
-                      validatorText: "Please enter your Expiration Date",
-                      title: 'Expiration Date (MM/YY)',
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: AppPaddings.all24,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TitleText(),
+                SizedBox(height: 30),
+                InputFields(
+                  validatorText: "Please enter your card number",
+                  title: 'Card Number',
+                ),
+                SizedBox(height: 30),
+                InputFields(
+                  validatorText: "Please enter your cardholder name",
+                  title: 'Cardholder Name',
+                ),
+                SizedBox(height: 30),
+                Row(
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: InputFields(
+                        validatorText: "Please enter your Expiration Date",
+                        title: 'Expiration Date (MM/YY)',
+                      ),
                     ),
-                  ),
-                  SizedBox(width: 10),
-                  Expanded(
-                    flex: 1,
-                    child: InputFields(
-                      validatorText: "Please enter your CVV Code",
-                      title: 'CVV Cod',
-                    ),
-                  )
-                ],
-              ),
-              SizedBox(height: 10),
-              SwitchButton(),
-              SizedBox(height: 60),
-              PaymentButton(),
-              SizedBox(height: 50),
-              SecurityText(),
-            ],
+                    SizedBox(width: 10),
+                    Expanded(
+                      flex: 1,
+                      child: InputFields(
+                        validatorText: "Please enter your CVV Code",
+                        title: 'CVV Cod',
+                      ),
+                    )
+                  ],
+                ),
+                SizedBox(height: 10),
+                SwitchButton(),
+                SizedBox(height: 60),
+                PaymentButton(),
+                SizedBox(height: 50),
+                SecurityText(),
+              ],
+            ),
           ),
         ),
       ),
